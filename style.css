@@ -63,6 +63,11 @@ body
     gap: 60px;
 }
 
+.navigation_menu
+{
+    display: none;
+}
+
 a
 {
     text-decoration: none;
@@ -80,7 +85,6 @@ a
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 1440px;
     padding-inline: 13%;
     gap: 30px;
     padding-bottom: 65px;
@@ -114,7 +118,7 @@ a
     line-height: 110%;
 }
 
-.title_description
+.hero_title_description
 {
     font-size: 0.9rem;
     color: var(--clr5);
@@ -202,6 +206,7 @@ a
     width: 100%;
     max-width: 360px;
     background-color: var(--clr2);
+    margin-inline: auto;
 }
 
 .card_content
@@ -430,19 +435,12 @@ a
     font-size: 1rem;
 }
 
-.footer_row-column
-{
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-    flex-direction: row;
-}
-
 .footer_info
 {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     gap: 60px;
+    flex-direction: row;
 }
 
 .footer_info_title
@@ -544,5 +542,93 @@ a
         justify-content: space-between;
         flex-direction: row;
     }
+
+    .footer_info
+    {
+        justify-content: center;
+    }
+
+    .footer_social_media
+    {
+        align-items: center;
+    }
     
+}
+
+@media screen and (max-width: 660px) 
+{
+    .hero
+    {
+        flex-direction: column;
+        max-width: 500px;
+        margin-inline: auto;
+    }
+
+    .hero_img
+    {
+        display: flex;
+        max-width: 420px;
+    }
+
+    .products_btn
+    {
+        margin-inline: auto;
+    }
+
+    .catalog_header
+    {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .catalog_buttons
+    {
+        justify-content: space-between;
+    }
+
+    .catalog_cards
+    {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 600px)
+{
+    .navigation
+    {
+        gap: 30px;
+    }
+    .navigation_text
+    {
+        display: none;
+    }
+
+    .navigation_menu
+    {
+        display: block;
+    }
+
+    .promo_title_text
+    {
+        font-size: 1.5rem;
+    }
+
+    .promo_description_1, .promo_description_2
+    {
+        font-size: 0.75rem;
+    }
+
+    .footer_info
+    {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 385px) 
+{
+    .catalog_buttons
+    {
+        gap: 15px;
+    }    
 }
