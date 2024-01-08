@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="./script.js" defer></script>
     <title>Gallery</title>
 </head>
 <body>
@@ -18,10 +17,17 @@
             </div>
 
             <div class="navigation">
-                <img class="navigation_menu" src="./images/menu_arrow.svg" alt="netu">
-                <h2 class="navigation_text"><a href="#">Репродукции</a></h2>
-                <h2 class="navigation_text"><a href="#">Новинки</a></h2>
-                <h2 class="navigation_text"><a href="#">О нас</a></h2>
+                <div class="drop_menu">
+                    <button class="navigation_menu" id="menu_btn"><img src="./images/menu_arrow.svg" alt="netu"></button>
+                    <div class="drop_menu_content" id="menu">
+                        <h2 class="menu_item"><a href="#catalog_url">Репродукции</a></h2>
+                        <h2 class="menu_item"><a href="#promo_url">Новинки</a></h2>
+                        <h2 class="menu_item"><a href="#ad_url">О нас</a></h2>
+                    </div>
+                </div>
+                <h2 class="navigation_text"><a href="#catalog_url">Репродукции</a></h2>
+                <h2 class="navigation_text"><a href="#promo_url">Новинки</a></h2>
+                <h2 class="navigation_text"><a href="#ad_url">О нас</a></h2>
                 <a href="#"><img src="./images/shopping-cart.svg" alt="netu"></a>
             </div>
 
@@ -35,16 +41,16 @@
                 <button class="products_btn"><p class="btn_text">Продукция</p></button>
             </div>
         </div>
-        <div class="catalog">
+        <div class="catalog" id="catalog_url">
             <div class="catalog_header">
                 <h1 class="catalog_header_title">Репродукции</h1>
                 <div class="catalog_buttons">
-                    <button class="country_btn btn_green_mod"><p class="country_btn_text btn_text_white_mod">Франция</p></button>
-                    <button class="country_btn"><p class="country_btn_text">Германия</p></button>
-                    <button class="country_btn"><p class="country_btn_text">Англия</p></button>
+                    <button class="country_btn btn_green_mod" data-tab="#tab_1">Франция</button>
+                    <button class="country_btn" data-tab="#tab_2">Германия</button>
+                    <button class="country_btn" data-tab="#tab_3">Англия</button>
                 </div>
             </div>
-            <div class="catalog_cards">
+            <div class="catalog_cards" id="tab_1">
                 <div class="catalog_card">
                      <div class="card_content">
                         <img class="card_img" src="./images/card_img1.jpg" alt="netu">
@@ -106,8 +112,132 @@
                     </div>   
                 </div>
             </div>
+            <div class="catalog_cards" id="tab_2">
+                <div class="catalog_card">
+                    <div class="card_content">
+                       <img class="card_img" src="./images/card_img7.jpg" alt="netu">
+                       <p class="card_autor">Курт Вернер</p>
+                       <p class="card_name">Над городом</p>
+                       <p class="card_materials">Цветная литография (40х60)</p>
+                       <p class="card_price">16 000 руб</p>
+                       <button class="card_btn"><p class="card_btn_text">В корзину</p></button>
+                    </div>   
+               </div>
+               <div class="catalog_card">
+                   <div class="card_content">
+                       <img class="card_img" src="./images/card_img8.jpg" alt="netu">
+                       <p class="card_autor">Макс Рихтер</p>
+                       <p class="card_name">Птенцы</p>
+                       <p class="card_materials">Холст, масло (50х80)</p>
+                       <p class="card_price">14 500 руб</p>
+                       <button class="card_btn"><p class="card_btn_text">В корзину</p></button>
+                   </div>   
+               </div>
+               <div class="catalog_card">
+                   <div class="card_content">
+                       <img class="card_img" src="./images/card_img9.jpg" alt="netu">
+                       <p class="card_autor">Мартин Майер</p>
+                       <p class="card_name">Среди листьев</p>
+                       <p class="card_materials">Цветная литография (40х60)</p>
+                       <p class="card_price">20 000 руб</p>
+                       <button class="card_btn"><p class="card_btn_text">В корзину</p></button>
+                   </div>   
+               </div>
+               <div class="catalog_card">
+                   <div class="card_content">
+                       <img class="card_img" src="./images/card_img10.jpg" alt="netu">
+                       <p class="card_autor">Герман Беккер</p>
+                       <p class="card_name">Яркая птица</p>
+                       <p class="card_materials">Цветная литография (40х60)</p>
+                       <p class="card_price">13 000 руб</p>
+                       <button class="card_btn"><p class="card_btn_text">В корзину</p></button>
+                   </div>   
+               </div>
+               <div class="catalog_card">
+                   <div class="card_content">
+                       <img class="card_img" src="./images/card_img11.jpg" alt="netu">
+                       <p class="card_autor">Вульф Бауэр</p>
+                       <p class="card_name">Дятлы</p>
+                       <p class="card_materials">Бумага, акрил (50х80)</p>
+                       <p class="card_price">20 000 руб</p>
+                       <button class="card_btn"><p class="card_btn_text">В корзину</p></button>
+                   </div>   
+               </div>
+               <div class="catalog_card">
+                   <div class="card_content">
+                       <img class="card_img" src="./images/card_img12.jpg" alt="netu">
+                       <p class="card_autor">Вальтер Хартманн</p>
+                       <p class="card_name">Большие воды</p>
+                       <p class="card_materials">Бумага, акрил (50х80)</p>
+                       <p class="card_price">23 000 руб</p>
+                       <button class="card_btn"><p class="card_btn_text">В корзину</p></button>
+                   </div>   
+               </div>
+            </div>
+            <div class="catalog_cards" id="tab_3">
+                <div class="catalog_card">
+                    <div class="card_content">
+                       <img class="card_img" src="./images/card_img13.jpg" alt="netu">
+                       <p class="card_autor">Пол Смит</p>
+                       <p class="card_name">Дикий зверь</p>
+                       <p class="card_materials">Акварель, бумага (50х80)</p>
+                       <p class="card_price">19 500 руб</p>
+                       <button class="card_btn"><p class="card_btn_text">В корзину</p></button>
+                    </div>   
+               </div>
+               <div class="catalog_card">
+                   <div class="card_content">
+                       <img class="card_img" src="./images/card_img14.jpg" alt="netu">
+                       <p class="card_autor">Джон Уайт</p>
+                       <p class="card_name">Скалистый берег</p>
+                       <p class="card_materials">Цветная литография (40х60)</p>
+                       <p class="card_price">17 500 руб</p>
+                       <button class="card_btn"><p class="card_btn_text">В корзину</p></button>
+                   </div>   
+               </div>
+               <div class="catalog_card">
+                   <div class="card_content">
+                       <img class="card_img" src="./images/card_img15.jpg" alt="netu">
+                       <p class="card_autor">Джим Уотсон</p>
+                       <p class="card_name">Река и горы</p>
+                       <p class="card_materials">Акварель, бумага (50х80)</p>
+                       <p class="card_price">20 500 руб</p>
+                       <button class="card_btn"><p class="card_btn_text">В корзину</p></button>
+                   </div>   
+               </div>
+               <div class="catalog_card">
+                   <div class="card_content">
+                       <img class="card_img" src="./images/card_img16.jpg" alt="netu">
+                       <p class="card_autor">Юджин Зиллион</p>
+                       <p class="card_name">Белый попугай</p>
+                       <p class="card_materials">Цветная литография (40х60)</p>
+                       <p class="card_price">15 500 руб</p>
+                       <button class="card_btn"><p class="card_btn_text">В корзину</p></button>
+                   </div>   
+               </div>
+               <div class="catalog_card">
+                   <div class="card_content">
+                       <img class="card_img" src="./images/card_img17.jpg" alt="netu">
+                       <p class="card_autor">Эрик Гиллман</p>
+                       <p class="card_name">Ночная рыба</p>
+                       <p class="card_materials">Бумага, акрил (50х80)</p>
+                       <p class="card_price">12 500 руб</p>
+                       <button class="card_btn"><p class="card_btn_text">В корзину</p></button>
+                   </div>   
+               </div>
+               <div class="catalog_card">
+                   <div class="card_content">
+                       <img class="card_img" src="./images/card_img18.jpg" alt="netu">
+                       <p class="card_autor">Альфред Барр</p>
+                       <p class="card_name">Рыжий кот</p>
+                       <p class="card_materials">Цветная литография (40х60)</p>
+                       <p class="card_price">21 000 руб</p>
+                       <button class="card_btn"><p class="card_btn_text">В корзину</p></button>
+                   </div>   
+               </div>
+            </div>
         </div>
-        <div class="promo">
+        <div class="promo" id="promo_url">
             <img src="./images/promo_bg.png" alt="netu" class="promo_bg_img">
             <div class="promo_content">
                 <div class="promo_title">
@@ -119,7 +249,7 @@
                 <button class="promo_btn"><p class="promo_btn_text">Ознакомиться</p></button>
             </div>
         </div>
-        <div class="ad">
+        <div class="ad" id="ad_url">
             <img class="ad_img" src="./images/add_img.svg" alt="netu">
             <div class="ad_main">
                 <h1 class="ad_title">Наша команда</h1>
@@ -173,5 +303,6 @@
             </div>
         </div>
     </div>
+    <script src="./script.js" defer></script>
 </body>
 </html>
