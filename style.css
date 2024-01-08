@@ -8,6 +8,11 @@
     font-size: 16px;
 }
 
+html
+{
+    scroll-behavior: smooth;
+}
+
 :root
 {
     --clr1: #F4F6F5;
